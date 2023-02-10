@@ -12,7 +12,7 @@ public class PlayerActor : MonoBehaviour
     public int playerIndex = 0;
     public Camera camera;
 
-    public float jump;
+    int vida = 3;   
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +32,16 @@ public class PlayerActor : MonoBehaviour
     void FixedUpdate()
     {
         rig.AddForce(Vector2.right * velocity, ForceMode.Impulse);
+    }
 
+    
 
-        if (Input.GetKeyDown(KeyCode.Space))
+    void Update()
+    {
+        if (gameObject.transform.position.y == -7) 
         {
-            rig.AddForce(new Vector2(0, jump), ForceMode.Impulse);
+            vida--;
         }
     }
+
 }

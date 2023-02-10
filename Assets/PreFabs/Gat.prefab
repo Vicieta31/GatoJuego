@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 595260282335080265}
   m_Layer: 0
   m_Name: Gat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   velocity: 0.1
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
-  jump: 5
 --- !u!65 &2265031935829831695
 BoxCollider:
   m_ObjectHideFlags: 0

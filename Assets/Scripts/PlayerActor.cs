@@ -90,6 +90,12 @@ public class PlayerActor : MonoBehaviour
             vida++;
         }
     }
+
+    public int GetHp()
+    {
+        return vida;
+    }
+
     public void ReduceHP()
     {
         vida--;

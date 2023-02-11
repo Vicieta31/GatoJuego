@@ -109,6 +109,20 @@ public class PlayerActor : MonoBehaviour
         return false;
     }
 
+    //
+    void setPlayerIndex(int ind)
+    {
+        playerIndex = ind;
+        if (playerIndex == 1)
+        {
+            camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
+        }
+        if (playerIndex == 0)
+        {
+            camera.rect = new Rect(0f, 0f, 1f, 0.5f);
+        }
+    }
+
     //Atacar con espacio al enemigo
 
 

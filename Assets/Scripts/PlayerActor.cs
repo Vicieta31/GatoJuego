@@ -102,18 +102,23 @@ public class PlayerActor : MonoBehaviour
 
     private void SaveKeyState()
     {
-        
+
         //grabar els botons a array
+        KeyCode[] e = new KeyCode[skillCheck.keys.Length];
         foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
         {
+            if (vKey == KeyCode.None)
+            {
+                continue;
+            }
             if (Input.GetKeyDown(vKey))
             {
-                for (int i = 0; i < latestKeys.Length; i++)
+                for (int i = 1; i < latestKeys.Length; i++)
                 {
-                    int intValue = (int)latestKeys[i];
-                    intValue = intValue / 2;
-                    latestKeys[i] = (KeyCode)intValue;    ///NO ESA MOVENT EL VALOR
+                    e[i] = latestKeys[i - 1];
+                    Debug.Log(latestKeys[i - 1]);
                 }
+                latestKeys = e;
                 latestKeys[0] = vKey;
             }
         }

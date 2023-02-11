@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1484197931743311232}
   - component: {fileID: 595260282335080265}
   - component: {fileID: 3784760583456842109}
+  - component: {fileID: 2937626110160469888}
   m_Layer: 0
   m_Name: Gat
   m_TagString: Player
@@ -81,8 +82,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 18, z: 1}
-  m_Center: {x: 0, y: -0.5, z: 0}
+  m_Size: {x: 10, y: 12.82, z: 7.96}
+  m_Center: {x: 0, y: 2, z: 0}
+--- !u!135 &2937626110160469888
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484197931743311235}
+  m_Material: {fileID: 13400000, guid: d33795549f92748419617db83aefa591, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: -4.51, z: 0}
 --- !u!1 &1484197932168559220
 GameObject:
   m_ObjectHideFlags: 0

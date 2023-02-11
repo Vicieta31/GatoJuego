@@ -47,11 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c8c0f7d10ad004b9f69d7471419ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gfx_Cat: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   renderer: {fileID: 1484197932168559211}
   velocity: 0.1
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
+  skillCheck: {fileID: 0}
+  isInSkillCheck: 0
 --- !u!65 &2265031935829831695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.2874064, y: 4.794595, z: 1}
+  m_Center: {x: -0.07607865, y: -0.008452892, z: 0}
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

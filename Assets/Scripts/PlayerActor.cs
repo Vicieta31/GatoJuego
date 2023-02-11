@@ -75,7 +75,7 @@ public class PlayerActor : MonoBehaviour
     private void Restart()
     {
         vida--;
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x - 20f, 0f, gameObject.transform.position.z);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x - 20f, gameObject.transform.position.x + 60f, gameObject.transform.position.z);
     }
 
     void Update()

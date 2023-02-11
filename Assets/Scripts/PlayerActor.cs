@@ -22,8 +22,8 @@ public class PlayerActor : MonoBehaviour
     public int playerIndex = 0;
     public Camera camera;
 
-    int vida = 3;
-
+    int vida = 7;
+    bool stopPlayer = false;
     public TriggerSkillCheck skillCheck;
     public bool isInSkillCheck = false;
 
@@ -60,7 +60,10 @@ public class PlayerActor : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rig.AddForce(Vector2.right * velocity, ForceMode.Impulse);
+        if (!stopPlayer)
+        {
+            rig.AddForce(Vector2.right * velocity, ForceMode.Impulse);
+        }
     }
 
 
@@ -74,10 +77,22 @@ public class PlayerActor : MonoBehaviour
 
     private void Restart()
     {
-        vida--;
+        ReduceHP();
         gameObject.transform.position = new Vector3(gameObject.transform.position.x - 20f, gameObject.transform.position.x + 60f, gameObject.transform.position.z);
     }
 
+    public void ReduceHP()
+    {
+        vida--;
+    }
+    public void StopPlayer()
+    {
+        stopPlayer = true;
+    }
+    public void MakePlayerRun()
+    {
+        stopPlayer = false;
+    }
     void Update()
     {
 
@@ -85,10 +100,6 @@ public class PlayerActor : MonoBehaviour
 
         if (isInSkillCheck)
         {
-            if (true)
-            {
-
-            }
             SaveKeyState();
 
 

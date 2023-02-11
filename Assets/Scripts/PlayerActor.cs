@@ -92,7 +92,19 @@ public class PlayerActor : MonoBehaviour
 
             //comprovar amb el objecte original si son iguals
             // - Son iguals fer salt SALT()
-            if (skillCheck.GetKeys(playerIndex).Equals(latestKeys))
+            KeyCode[] e = skillCheck.GetKeys(playerIndex);
+            int a = 0;
+            bool equalInputs = true;
+            for (int i = e.Length-1; i > 0; i--)
+            {
+                if (latestKeys[a] != e[i])
+                {
+                    equalInputs = false;
+                }
+                a++;
+            }
+            //Debug.Log("Player" + latestKeys[0] +" - " + latestKeys[1] + " - " + latestKeys[2] + " \n Skill: "+ e[0] + " - "+e[1] + " - " + e[2]);
+            if (equalInputs)
             {
                 isInSkillCheck = false;
                 Jump();
@@ -116,18 +128,18 @@ public class PlayerActor : MonoBehaviour
                 for (int i = 1; i < latestKeys.Length; i++)
                 {
                     e[i] = latestKeys[i - 1];
-                    Debug.Log(latestKeys[i - 1]);
+                    //Debug.Log(latestKeys[i - 1]);
                 }
                 latestKeys = e;
                 latestKeys[0] = vKey;
             }
         }
-        Debug.Log(latestKeys[0] +" - " + latestKeys[1] + " - " + latestKeys[2]);
+        //Debug.Log(latestKeys[0] +" - " + latestKeys[1] + " - " + latestKeys[2]);
     }
 
     private void Jump()
     {
         Debug.Log("IN22");
-        rig.AddForce(Vector3.up * 100f, ForceMode.Impulse);
+        rig.AddForce(skillCheck.vectorForce, ForceMode.Impulse);
     }
 }

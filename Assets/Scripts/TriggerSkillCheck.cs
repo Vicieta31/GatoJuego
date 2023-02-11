@@ -6,7 +6,7 @@ public class TriggerSkillCheck : MonoBehaviour
 {
     public KeyCode[] keys;
     KeyCode[] keys2;
-
+    public Vector3 vectorForce = Vector3.up;
     // Start is called before the first frame update
     void Start()
     {

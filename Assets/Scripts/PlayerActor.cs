@@ -70,15 +70,18 @@ public class PlayerActor : MonoBehaviour
     /// FES EL NIVELL I COSES DE ANIMACIO EN TOT CAS
     /// ---OSIGUI APLIQUEU ELS SPRITES EN EL NIVELL I FES UN MENU PRINCIPAL PER INICIAR EL JOC
     /// </summary>
+    
 
+    private void Restart()
+    {
+        vida--;
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x - 20f, 0f, gameObject.transform.position.z);
+    }
 
     void Update()
     {
-        if (gameObject.transform.position.y == -7) 
-        {
-            vida--;
-            gameObject.transform.position.Set(gameObject.transform.position.x - 10f, 0f, gameObject.transform.position.z);
-        }
+
+       
 
         if (isInSkillCheck)
         {
@@ -110,6 +113,7 @@ public class PlayerActor : MonoBehaviour
                 Jump();
             }
         }
+
     }
 
     private void SaveKeyState()
@@ -141,5 +145,15 @@ public class PlayerActor : MonoBehaviour
     {
         Debug.Log("IN22");
         rig.AddForce(skillCheck.vectorForce, ForceMode.Impulse);
+    }
+
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "yDeath")
+        {
+            Restart();
+        }
+
     }
 }

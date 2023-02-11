@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1484197931743311239}
   - component: {fileID: 1484197931743311232}
-  - component: {fileID: 2265031935829831695}
   - component: {fileID: 595260282335080265}
+  - component: {fileID: 3784760583456842109}
   m_Layer: 0
   m_Name: Gat
   m_TagString: Player
@@ -54,19 +54,6 @@ MonoBehaviour:
   camera: {fileID: 4883466454635616170}
   skillCheck: {fileID: 0}
   isInSkillCheck: 0
---- !u!65 &2265031935829831695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484197931743311235}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2874064, y: 4.794595, z: 1}
-  m_Center: {x: -0.07607865, y: -0.008452892, z: 0}
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -83,6 +70,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!65 &3784760583456842109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484197931743311235}
+  m_Material: {fileID: 13400000, guid: 2042c76ac3ce79e469fa0b37ff7e30ce, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 18, z: 1}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &1484197932168559220
 GameObject:
   m_ObjectHideFlags: 0

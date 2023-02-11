@@ -17,7 +17,7 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rig.AddForce(new Vector2(0, jump), ForceMode.Impulse);
+            rig.AddForce(new Vector2(0, jump), ForceMode.Force);
         }
     }
 }

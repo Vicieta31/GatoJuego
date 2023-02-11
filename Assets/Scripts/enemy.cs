@@ -15,4 +15,14 @@ public class enemy : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerActor player = collision.gameObject.GetComponent<PlayerActor>();
+            player.ReduceHP();
+            Destroy(this);
+        }
+    }
 }

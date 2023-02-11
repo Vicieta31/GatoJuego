@@ -50,11 +50,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   renderer: {fileID: 1484197932168559211}
-  velocity: 10
+  velocity: 1
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
+  stopPlayer: 0
   skillCheck: {fileID: 0}
   isInSkillCheck: 0
+  isPlayerFinished: 0
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0

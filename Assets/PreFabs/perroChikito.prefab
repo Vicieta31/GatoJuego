@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7949944465827484520}
   - component: {fileID: 7716198138456710567}
+  - component: {fileID: 3696353768993083221}
   m_Layer: 0
   m_Name: perroChikito
   m_TagString: Untagged
@@ -122,5 +123,17 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.143814, y: 7.7972107, z: 40}
+  m_Center: {x: 0.36741638, y: -0.03061676, z: 0}
+--- !u!114 &3696353768993083221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191916240841467118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c436e8d80e2047a3d773cc97353df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

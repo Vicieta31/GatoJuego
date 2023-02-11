@@ -9,6 +9,7 @@ public class FinnishLine : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerActor>().StopPlayer();
+            collision.gameObject.GetComponent<PlayerActor>().SetPlayerFinished();
         }
         
     }

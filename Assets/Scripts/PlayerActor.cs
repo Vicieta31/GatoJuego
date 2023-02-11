@@ -26,7 +26,7 @@ public class PlayerActor : MonoBehaviour
     public bool stopPlayer = false;
     public TriggerSkillCheck skillCheck;
     public bool isInSkillCheck = false;
-
+    public bool isPlayerFinished = false;
     private KeyCode[] latestKeys;
     private Countdown countdown;
     void Start()
@@ -93,6 +93,10 @@ public class PlayerActor : MonoBehaviour
     public void MakePlayerRun()
     {
         stopPlayer = false;
+    }
+    public void SetPlayerFinished()
+    {
+        isPlayerFinished = true;
     }
     void Update()
     {

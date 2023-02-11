@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   renderer: {fileID: 1484197932168559211}
-  velocity: 1
+  velocity: 10
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
   skillCheck: {fileID: 0}

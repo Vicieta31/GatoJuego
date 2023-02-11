@@ -23,7 +23,7 @@ public class PlayerActor : MonoBehaviour
     public Camera camera;
 
     int vida = 7;
-    bool stopPlayer = false;
+    public bool stopPlayer = false;
     public TriggerSkillCheck skillCheck;
     public bool isInSkillCheck = false;
 
@@ -88,6 +88,7 @@ public class PlayerActor : MonoBehaviour
     public void StopPlayer()
     {
         stopPlayer = true;
+        rig.velocity = Vector3.zero;
     }
     public void MakePlayerRun()
     {

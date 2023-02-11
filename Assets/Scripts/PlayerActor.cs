@@ -81,6 +81,10 @@ public class PlayerActor : MonoBehaviour
         gameObject.transform.position = new Vector3(gameObject.transform.position.x - 20f, gameObject.transform.position.x + 60f, gameObject.transform.position.z);
     }
 
+    public void AumentaHp()
+    {
+        vida++;
+    }
     public void ReduceHP()
     {
         vida--;

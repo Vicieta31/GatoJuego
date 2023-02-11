@@ -108,6 +108,10 @@ public class PlayerActor : MonoBehaviour
         }
         return false;
     }
+
+    //Atacar con espacio al enemigo
+
+
     public void StopPlayer()
     {
         stopPlayer = true;

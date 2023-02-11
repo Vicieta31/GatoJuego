@@ -38,7 +38,7 @@ public class PlayerActor : MonoBehaviour
         rig = GetComponent<Rigidbody>();
         if (playerIndex == 1)
         {
-            camera.rect = new Rect(0.5f, 0f, 0.5f, 1f);
+            camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
         }
     }
 

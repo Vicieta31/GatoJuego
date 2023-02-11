@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   renderer: {fileID: 1484197932168559211}
-  velocity: 0.1
+  velocity: 1
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
   skillCheck: {fileID: 0}
@@ -63,7 +63,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484197931743311235}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 40
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1

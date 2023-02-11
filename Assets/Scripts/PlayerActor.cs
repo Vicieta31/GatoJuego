@@ -22,7 +22,7 @@ public class PlayerActor : MonoBehaviour
     public int playerIndex = 0;
     public Camera camera;
 
-    int vida = 6;
+    int vida = 7;
     int vidaMax;
     public bool stopPlayer = false;
     public TriggerSkillCheck skillCheck;
@@ -30,6 +30,7 @@ public class PlayerActor : MonoBehaviour
     public bool isPlayerFinished = false;
     private KeyCode[] latestKeys;
     private Countdown countdown;
+    public float greacePrriod = 0.2f;
     void Start()
     {
         vidaMax = vida;
@@ -42,6 +43,9 @@ public class PlayerActor : MonoBehaviour
         {
             camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
         }
+        countdown = gameObject.AddComponent<Countdown>();
+        countdown.SetCuntdown(greacePrriod);
+        countdown.StartTimer();
     }
 
 
@@ -85,9 +89,14 @@ public class PlayerActor : MonoBehaviour
 
     public void AumentaHp()
     {
-        if (vida <= vidaMax)
+        if (countdown.HasCompleted())
         {
-            vida++;
+            if (vida < vidaMax)
+            {
+                vida++;
+            }
+            countdown.ResetTimer();
+            
         }
     }
 
@@ -98,7 +107,12 @@ public class PlayerActor : MonoBehaviour
 
     public void ReduceHP()
     {
-        vida--;
+        if (countdown.HasCompleted())
+        {
+            countdown.ResetTimer();
+            vida--;
+        }
+
     }
     public bool muerto()
     {

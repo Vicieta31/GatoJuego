@@ -50,13 +50,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
   renderer: {fileID: 1484197932168559211}
-  velocity: 1
+  velocity: 4
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
   stopPlayer: 0
   skillCheck: {fileID: 0}
   isInSkillCheck: 0
   isPlayerFinished: 0
+  greacePrriod: 0.2
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3771396012222653946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -55.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1484197931743311239}
@@ -236,7 +237,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 25
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

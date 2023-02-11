@@ -21,7 +21,7 @@ public class pez : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerActor player = collision.gameObject.GetComponent<PlayerActor>();
-            player.ReduceHP();
+            player.AumentaHp();
             Destroy(this);
         }
     }

@@ -22,7 +22,8 @@ public class PlayerActor : MonoBehaviour
     public int playerIndex = 0;
     public Camera camera;
 
-    int vida = 7;
+    int vida = 6;
+    int vidaMax;
     public bool stopPlayer = false;
     public TriggerSkillCheck skillCheck;
     public bool isInSkillCheck = false;
@@ -31,6 +32,7 @@ public class PlayerActor : MonoBehaviour
     private Countdown countdown;
     void Start()
     {
+        vidaMax = vida;
         if (gfx_Cat != null && renderer != null)
         {
             renderer.sprite = gfx_Cat;
@@ -83,11 +85,22 @@ public class PlayerActor : MonoBehaviour
 
     public void AumentaHp()
     {
-        vida++;
+        if (vida <= vidaMax)
+        {
+            vida++;
+        }
     }
     public void ReduceHP()
     {
         vida--;
+    }
+    public bool muerto()
+    {
+        if (vida <= 0)
+        {
+            return true;
+        }
+        return false;
     }
     public void StopPlayer()
     {

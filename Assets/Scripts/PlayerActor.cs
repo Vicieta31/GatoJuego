@@ -40,7 +40,7 @@ public class PlayerActor : MonoBehaviour
     public RuntimeAnimatorController ControllerP1;
     public RuntimeAnimatorController ControllerP2;
 
-    private Animator animator;
+    public Animator animator;
     private float distToGround;
     private bool hasJumped;
 

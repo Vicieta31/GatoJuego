@@ -38,25 +38,33 @@ public class GameManger : MonoBehaviour
         {
             Time.timeScale = 0.1f;
             //Jugador 1 muerto
-            UIManager.ShowWinner(0);
+            UIManager.ShowWinner(1);
+            player1.animator.SetBool("Die", true);
+            player2.animator.SetBool("Celebrate", true);
         }
         if (player2.muerto())
         {
             Time.timeScale = 0.1f;
             //Jugador 2 muerto
-            UIManager.ShowWinner(1);
+            UIManager.ShowWinner(0);
+            player2.animator.SetBool("Die", true);
+            player1.animator.SetBool("Celebrate", true);
         }
         if (player1.isPlayerFinished)
         {
             Time.timeScale = 0.1f;
             //Jugador 1 muerto
             UIManager.ShowWinner(0);
+            player2.animator.SetBool("Lose", true);
+            player1.animator.SetBool("Celebrate", true);
         }
         if (player2.isPlayerFinished)
         {
             Time.timeScale = 0.1f;
             //Jugador 2 muerto
             UIManager.ShowWinner(1);
+            player1.animator.SetBool("Lose", true);
+            player2.animator.SetBool("Celebrate", true);
         }
         UIManager.SetHpPlayer(0, player1.GetHp());
         UIManager.SetHpPlayer(1, player2.GetHp());

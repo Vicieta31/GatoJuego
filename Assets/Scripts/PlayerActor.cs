@@ -236,44 +236,6 @@ public class PlayerActor : MonoBehaviour
             {
                 continue;
             }
-            if (playerIndex == 0)
-            {
-                if (vKey == KeyCode.LeftArrow)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.RightArrow)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.UpArrow)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.DownArrow)
-                {
-                    continue;
-                }
-            }
-            else
-            {
-                if (vKey == KeyCode.A)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.S)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.D)
-                {
-                    continue;
-                }
-                if (vKey == KeyCode.W)
-                {
-                    continue;
-                }
-            }
             if (Input.GetKeyDown(vKey))
             {
                 for (int i = 1; i < latestKeys.Length; i++)

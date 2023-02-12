@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c8c0f7d10ad004b9f69d7471419ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gfx_Cat: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
+  gfx_Cat1: {fileID: 21300000, guid: 0db0c5bd018bd6c468c2e3179e24b526, type: 3}
+  gfx_Cat2: {fileID: 21300000, guid: 0f05a5758fb50a9469eec67770974263, type: 3}
   renderer: {fileID: 1484197932168559211}
   velocity: 4
   playerIndex: 0
@@ -58,6 +59,7 @@ MonoBehaviour:
   isInSkillCheck: 0
   isPlayerFinished: 0
   greacePrriod: 0.2
+  gm: {fileID: 0}
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0

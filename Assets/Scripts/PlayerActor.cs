@@ -15,7 +15,9 @@ public class PlayerActor : MonoBehaviour
     /// </summary>
 
         
-    public Sprite gfx_Cat;
+    public Sprite gfx_Cat1;
+    public Sprite gfx_Cat2;
+
     public SpriteRenderer renderer;
     Rigidbody rig;
     public float velocity = 0.1f;
@@ -37,15 +39,12 @@ public class PlayerActor : MonoBehaviour
     void Start()
     {
         vidaMax = vida;
-        if (gfx_Cat != null && renderer != null)
+        if (gfx_Cat1 != null && renderer != null)
         {
-            renderer.sprite = gfx_Cat;
+            renderer.sprite = gfx_Cat1;
         }
         rig = GetComponent<Rigidbody>();
-        if (playerIndex == 1)
-        {
-            camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
-        }
+        setPlayerIndex(playerIndex);
         countdown = gameObject.AddComponent<Countdown>();
         countdown.SetCuntdown(greacePrriod);
         countdown.StartTimer();
@@ -127,16 +126,18 @@ public class PlayerActor : MonoBehaviour
     }
 
     //
-    void setPlayerIndex(int ind)
+    public void setPlayerIndex(int ind)
     {
         playerIndex = ind;
-        if (playerIndex == 1)
-        {
-            camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
-        }
         if (playerIndex == 0)
         {
+            renderer.sprite = gfx_Cat1;
             camera.rect = new Rect(0f, 0f, 1f, 0.5f);
+        }
+        else
+        {
+            renderer.sprite = gfx_Cat2;
+            camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
         }
     }
 

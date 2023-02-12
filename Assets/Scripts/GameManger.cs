@@ -22,7 +22,8 @@ public class GameManger : MonoBehaviour
             spawnPoint.transform.position.y, 
             spawnPoint.transform.position.z+10f), 
             spawnPoint.transform.rotation).GetComponent<PlayerActor>();
-        player2.playerIndex = 1; //todo
+        player2.setPlayerIndex(0);
+        player2.setPlayerIndex(1);
         player1.gm = this;
         player2.gm = this;
 

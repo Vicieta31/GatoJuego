@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TriggerSkillCheck : MonoBehaviour
 {
+
+
+    //TODO: Show ui
     public KeyCode[] keys;
     KeyCode[] keys2;
     public Vector3 vectorForce = Vector3.up;
@@ -54,6 +57,15 @@ public class TriggerSkillCheck : MonoBehaviour
             player.skillCheck = this;
             player.isInSkillCheck = true;
             player.SetSkillCheckArray(keys.Length);
+            player.gm.UIManager.DeletePromptsOnScreen(player.playerIndex);
+            if (player.playerIndex == 0)
+            {
+                player.gm.UIManager.SetPromptsPlayer(player.playerIndex, keys);
+            }
+            else
+            {
+                player.gm.UIManager.SetPromptsPlayer(player.playerIndex, Translate());
+            }
         }
     }
     

@@ -23,6 +23,9 @@ public class GameManger : MonoBehaviour
             spawnPoint.transform.position.z+10f), 
             spawnPoint.transform.rotation).GetComponent<PlayerActor>();
         player2.playerIndex = 1; //todo
+        player1.gm = this;
+        player2.gm = this;
+
     }
     private void Update()
     {

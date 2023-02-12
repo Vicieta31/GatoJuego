@@ -36,6 +36,9 @@ public class PlayerActor : MonoBehaviour
     public float greacePrriod = 0.2f;
 
     public GameManger gm;
+
+    private Animator animator;
+
     void Start()
     {
         vidaMax = vida;
@@ -73,15 +76,6 @@ public class PlayerActor : MonoBehaviour
             rig.AddForce(Vector2.right * velocity, ForceMode.Impulse);
         }
     }
-
-
-
-    /// <summary>
-    /// NO AFAGEIXIS RE EN PLAYER
-    /// FES EL NIVELL I COSES DE ANIMACIO EN TOT CAS
-    /// ---OSIGUI APLIQUEU ELS SPRITES EN EL NIVELL I FES UN MENU PRINCIPAL PER INICIAR EL JOC
-    /// </summary>
-
 
     private void Restart()
     {
@@ -162,7 +156,11 @@ public class PlayerActor : MonoBehaviour
     }
     void Update()
     {
-
+        if (vida <= 0)
+        {
+            //Animacion vida
+            StopPlayer();
+        }
         if (rig.velocity.magnitude > velMax)
         {
             Vector3 newVel = rig.velocity.normalized;

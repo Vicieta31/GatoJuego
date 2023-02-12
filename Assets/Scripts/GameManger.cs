@@ -36,11 +36,27 @@ public class GameManger : MonoBehaviour
     {
         if (player1.muerto())
         {
+            Time.timeScale = 0.1f;
             //Jugador 1 muerto
+            UIManager.ShowWinner(0);
         }
         if (player2.muerto())
         {
+            Time.timeScale = 0.1f;
             //Jugador 2 muerto
+            UIManager.ShowWinner(1);
+        }
+        if (player1.isPlayerFinished)
+        {
+            Time.timeScale = 0.1f;
+            //Jugador 1 muerto
+            UIManager.ShowWinner(0);
+        }
+        if (player2.isPlayerFinished)
+        {
+            Time.timeScale = 0.1f;
+            //Jugador 2 muerto
+            UIManager.ShowWinner(1);
         }
         UIManager.SetHpPlayer(0, player1.GetHp());
         UIManager.SetHpPlayer(1, player2.GetHp());

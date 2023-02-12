@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 595260282335080265}
   - component: {fileID: 3784760583456842109}
   - component: {fileID: 2937626110160469888}
+  - component: {fileID: 3234765231390217981}
   m_Layer: 0
   m_Name: Gat
   m_TagString: Player
@@ -102,6 +103,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: -4.51, z: 0}
+--- !u!95 &3234765231390217981
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484197931743311235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54211b3a2fe294b428ef5c4f5468943f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1484197932168559220
 GameObject:
   m_ObjectHideFlags: 0

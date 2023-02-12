@@ -15,6 +15,25 @@ public class UIManager : MonoBehaviour
     public GameObject prompt2;
     public GameObject promptPrefab;
     public Sprite[] prompts;
+
+    public GameObject WinnerPanel;
+    public Text winnerText;
+
+    public void ShowWinner(int playerIndex)
+    {
+        WinnerPanel.SetActive(true);
+        if (playerIndex == 0)
+        {
+            winnerText.text = "PLAYER 1 WINS!";
+        }
+        else
+        {
+            winnerText.text = "PLAYER 2 WINS!";
+        }
+    }
+
+
+
     public void SetHpPlayer(int playerIndex, int hp)
     {
         switch (playerIndex)

@@ -1339,8 +1339,8 @@ MonoBehaviour:
   - {fileID: 21300024, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
   - {fileID: 21300034, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
   - {fileID: 21300036, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
-  WinnerPanel: {fileID: 0}
-  winnerText: {fileID: 0}
+  WinnerPanel: {fileID: 5875039147389734799}
+  winnerText: {fileID: 8159802616978465191}
 --- !u!1 &63736968524659852
 GameObject:
   m_ObjectHideFlags: 0

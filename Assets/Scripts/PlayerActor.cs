@@ -14,7 +14,7 @@ public class PlayerActor : MonoBehaviour
     /// ---OSIGUI APLIQUEU ELS SPRITES EN EL NIVELL I FES UN MENU PRINCIPAL PER INICIAR EL JOC
     /// </summary>
 
-        
+
     public Sprite gfx_Cat1;
     public Sprite gfx_Cat2;
 
@@ -33,7 +33,7 @@ public class PlayerActor : MonoBehaviour
     public bool isPlayerFinished = false;
     private KeyCode[] latestKeys;
     private Countdown countdown;
-    public float greacePrriod = 0.1f;
+    public float greacePrriod = 0.2f;
 
     public GameManger gm;
     void Start()
@@ -81,7 +81,7 @@ public class PlayerActor : MonoBehaviour
     /// FES EL NIVELL I COSES DE ANIMACIO EN TOT CAS
     /// ---OSIGUI APLIQUEU ELS SPRITES EN EL NIVELL I FES UN MENU PRINCIPAL PER INICIAR EL JOC
     /// </summary>
-    
+
 
     private void Restart()
     {
@@ -98,7 +98,9 @@ public class PlayerActor : MonoBehaviour
                 vida++;
             }
             countdown.ResetTimer();
-            
+            countdown.StartTimer();
+
+
         }
     }
 
@@ -112,6 +114,7 @@ public class PlayerActor : MonoBehaviour
         if (countdown.HasCompleted())
         {
             countdown.ResetTimer();
+            countdown.StartTimer();
             vida--;
         }
 
@@ -178,7 +181,7 @@ public class PlayerActor : MonoBehaviour
             KeyCode[] e = skillCheck.GetKeys(playerIndex);
             int a = 0;
             bool equalInputs = true;
-            for (int i = e.Length-1; i > 0; i--)
+            for (int i = e.Length - 1; i > 0; i--)
             {
                 if (latestKeys[a] != e[i])
                 {
@@ -223,7 +226,6 @@ public class PlayerActor : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("IN22");
         rig.AddForce(skillCheck.vectorForce, ForceMode.Impulse);
     }
 

@@ -16,7 +16,11 @@ public class GameManger : MonoBehaviour
     void GameStart()
     {
         
-        player1 = Instantiate(playerPrefab, spawnPoint.transform).GetComponent<PlayerActor>();
+        player1 = Instantiate(playerPrefab, new Vector3(
+            spawnPoint.transform.position.x,
+            spawnPoint.transform.position.y,
+            spawnPoint.transform.position.z),
+            spawnPoint.transform.rotation).GetComponent<PlayerActor>();
         player2 = Instantiate(playerPrefab, new Vector3(
             spawnPoint.transform.position.x, 
             spawnPoint.transform.position.y, 

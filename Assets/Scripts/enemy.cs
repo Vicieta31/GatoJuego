@@ -22,7 +22,7 @@ public class enemy : MonoBehaviour
         {
             PlayerActor player = collision.gameObject.GetComponent<PlayerActor>();
             player.ReduceHP();
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

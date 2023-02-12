@@ -52,7 +52,6 @@ public class TriggerSkillCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("In");
             PlayerActor player = collision.gameObject.GetComponent<PlayerActor>();
             player.skillCheck = this;
             player.isInSkillCheck = true;
@@ -68,5 +67,15 @@ public class TriggerSkillCheck : MonoBehaviour
             }
         }
     }
-    
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerActor player = collision.gameObject.GetComponent<PlayerActor>();
+            player.skillCheck = this;
+            player.isInSkillCheck = false;
+            player.gm.UIManager.DeletePromptsOnScreen(player.playerIndex);
+        }
+    }
+
 }

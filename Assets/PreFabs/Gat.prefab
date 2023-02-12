@@ -52,7 +52,7 @@ MonoBehaviour:
   gfx_Cat1: {fileID: 21300000, guid: 0db0c5bd018bd6c468c2e3179e24b526, type: 3}
   gfx_Cat2: {fileID: 21300000, guid: 0f05a5758fb50a9469eec67770974263, type: 3}
   renderer: {fileID: 1484197932168559211}
-  velocity: 4
+  velocity: 5
   playerIndex: 0
   camera: {fileID: 4883466454635616170}
   stopPlayer: 0

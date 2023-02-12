@@ -22,6 +22,7 @@ public class PlayerActor : MonoBehaviour
     public int playerIndex = 0;
     public Camera camera;
 
+    float velMax = 30;
     int vida = 7;
     int vidaMax;
     public bool stopPlayer = false;
@@ -31,6 +32,8 @@ public class PlayerActor : MonoBehaviour
     private KeyCode[] latestKeys;
     private Countdown countdown;
     public float greacePrriod = 0.2f;
+
+    public GameManger gm;
     void Start()
     {
         vidaMax = vida;
@@ -156,7 +159,12 @@ public class PlayerActor : MonoBehaviour
     void Update()
     {
 
-       
+        if (rig.velocity.magnitude > velMax)
+        {
+            Vector3 newVel = rig.velocity.normalized;
+            newVel *= velMax;
+            rig.velocity = newVel;
+        }
 
         if (isInSkillCheck)
         {

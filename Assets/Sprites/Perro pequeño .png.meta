@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 24476d58c6a69f64c9753fac80d2b177
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: "Perro pequen\u0303o _0"
+    21300002: "Perro pequen\u0303o _1"
+    21300004: "Perro pequen\u0303o _2"
+    21300006: "Perro pequen\u0303o _3"
+    21300008: "Perro pequen\u0303o _4"
+    21300010: "Perro pequen\u0303o _5"
+    21300012: "Perro pequen\u0303o _6"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -82,11 +89,151 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _0"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 96
+        width: 45
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90af9148868c6ef4ea099f4d9f5c73cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _1"
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 48
+        width: 45
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad3fb17b0249d447b816e21901c9520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _2"
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64ae8aeb213ac449ab1096a80294f24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _3"
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 48
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683b2681724623a4b821dbcac7650cea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _4"
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 49
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749232f5781dbba4bb144c7a7ef4cabd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _5"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 54
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825d4b8b8d70253489fb7f61af9ac13c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Perro pequen\u0303o _6"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 83
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c96ee7d3694e9e439896846a97a76b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b854e366982cf7f40bd324e5ea8ac442
     vertices: []
     indices: 
     edges: []

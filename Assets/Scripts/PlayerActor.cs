@@ -33,7 +33,7 @@ public class PlayerActor : MonoBehaviour
     public bool isPlayerFinished = false;
     private KeyCode[] latestKeys;
     private Countdown countdown;
-    public float greacePrriod = 0.2f;
+    public float greacePrriod = 0.1f;
 
     public GameManger gm;
     void Start()

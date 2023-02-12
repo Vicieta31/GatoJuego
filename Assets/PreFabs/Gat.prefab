@@ -61,6 +61,8 @@ MonoBehaviour:
   isPlayerFinished: 0
   greacePrriod: 0.2
   gm: {fileID: 0}
+  ControllerP1: {fileID: 9100000, guid: 54211b3a2fe294b428ef5c4f5468943f, type: 2}
+  ControllerP2: {fileID: 9100000, guid: 09c1a17592b62e74fae4c5f6373055e1, type: 2}
 --- !u!54 &595260282335080265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -190,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: e8708865e30a8284bbe2eef9bccfebef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f05a5758fb50a9469eec67770974263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

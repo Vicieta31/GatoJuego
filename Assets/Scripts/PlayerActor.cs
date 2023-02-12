@@ -37,7 +37,12 @@ public class PlayerActor : MonoBehaviour
 
     public GameManger gm;
 
+    public RuntimeAnimatorController ControllerP1;
+    public RuntimeAnimatorController ControllerP2;
+
     private Animator animator;
+    private float distToGround;
+    private bool hasJumped;
 
     void Start()
     {
@@ -51,6 +56,8 @@ public class PlayerActor : MonoBehaviour
         countdown = gameObject.AddComponent<Countdown>();
         countdown.SetCuntdown(greacePrriod);
         countdown.StartTimer();
+        animator = GetComponent<Animator>();
+        distToGround = 18f;
     }
 
 
@@ -73,7 +80,12 @@ public class PlayerActor : MonoBehaviour
     {
         if (!stopPlayer)
         {
+            animator.SetBool("Moving", true);
             rig.AddForce(Vector2.right * velocity, ForceMode.Impulse);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
         }
     }
 
@@ -117,6 +129,7 @@ public class PlayerActor : MonoBehaviour
     {
         if (vida <= 0)
         {
+            animator.SetBool("Die", true);
             return true;
         }
         return false;
@@ -126,13 +139,16 @@ public class PlayerActor : MonoBehaviour
     public void setPlayerIndex(int ind)
     {
         playerIndex = ind;
+        renderer.color = Color.white;
         if (playerIndex == 0)
         {
+            //animator.runtimeAnimatorController = ControllerP1;
             renderer.sprite = gfx_Cat1;
             camera.rect = new Rect(0f, 0f, 1f, 0.5f);
         }
         else
         {
+            // animator.runtimeAnimatorController = ControllerP2;
             renderer.sprite = gfx_Cat2;
             camera.rect = new Rect(0f, 0.5f, 1f, 0.5f);
         }
@@ -145,20 +161,32 @@ public class PlayerActor : MonoBehaviour
     {
         stopPlayer = true;
         rig.velocity = Vector3.zero;
+        animator.SetBool("Moving", false);
     }
     public void MakePlayerRun()
     {
+        animator.SetBool("Moving", true);
         stopPlayer = false;
     }
     public void SetPlayerFinished()
     {
         isPlayerFinished = true;
     }
+    bool IsGrounded()
+    {
+        bool ground = Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+        return ground;
+    }
     void Update()
     {
+        if (IsGrounded() && hasJumped)
+        {
+            animator.SetBool("IsJump", false);
+        }
         if (vida <= 0)
         {
             //Animacion vida
+            animator.SetBool("Die", true);
             StopPlayer();
         }
         if (rig.velocity.magnitude > velMax)
@@ -224,6 +252,8 @@ public class PlayerActor : MonoBehaviour
 
     private void Jump()
     {
+        hasJumped = true;
+        animator.SetBool("IsJump", true);
         rig.AddForce(skillCheck.vectorForce, ForceMode.Impulse);
     }
 

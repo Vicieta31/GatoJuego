@@ -1339,6 +1339,8 @@ MonoBehaviour:
   - {fileID: 21300024, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
   - {fileID: 21300034, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
   - {fileID: 21300036, guid: e6958511ce3930f46a22cce3884e6fdc, type: 3}
+  WinnerPanel: {fileID: 0}
+  winnerText: {fileID: 0}
 --- !u!1 &63736968524659852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,7 +1866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5934255295829398540
 RectTransform:
   m_ObjectHideFlags: 0

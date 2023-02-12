@@ -75,10 +75,10 @@ public class UIManager : MonoBehaviour
                 case KeyCode.DownArrow:
                     SpawnPrompt(indexPlayer, prompts[2 + 4]);
                     break;
-                case KeyCode.RightArrow:
+                case KeyCode.LeftArrow:
                     SpawnPrompt(indexPlayer, prompts[1 + 4]);
                     break;
-                case KeyCode.LeftArrow:
+                case KeyCode.RightArrow:
                     SpawnPrompt(indexPlayer, prompts[3 + 4]);
                     break;
                 case KeyCode.W:
